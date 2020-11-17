@@ -22,8 +22,6 @@ import { MoneyConvertorComponent } from './money-convertor/money-convertor.compo
     HeaderComponent,
     FooterComponent,
     MoneyConvertorComponent,
-
-
   ],
   imports: [
     BrowserModule,
