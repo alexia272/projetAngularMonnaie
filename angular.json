@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ProjetMonnaie"
+    }
+  },
+  "defaultProject": "ProjetMonnaie",
+  "cli": {
+    "analytics": false
+  }
 }
