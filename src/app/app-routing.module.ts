@@ -14,6 +14,11 @@ const routes: Routes = [
   },
   {
     path: 'devises', component: DevisesComponent
+  },
+  {
+    path: 'httpclient',
+    loadChildren: () => import('./modules/application/items/items.module')
+      .then(mod => mod.ItemsModule)
   }
 ];
 

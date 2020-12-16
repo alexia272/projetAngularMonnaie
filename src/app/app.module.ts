@@ -17,10 +17,13 @@ import { MoneyConvertorComponent } from './money-convertor/money-convertor.compo
     HeaderComponent,
     FooterComponent,
     MoneyConvertorComponent,
+
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'angular-starter' }),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
