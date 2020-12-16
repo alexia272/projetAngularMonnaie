@@ -1,16 +1,129 @@
-<p> devises </p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="devises.component.css">
+    <script src="devises.component.ts"></script>
+    <script type="text/typescript" src="https://api.devises.org/v1/full/EUR/json?key=6308|a5k67trS*U61GHjbqqBGpFO7ed1azA21"></script>
+    <title>DEVISES</title>
+</head>
 
 <body>
+    <h1>
+        Au sens strict, une devise est une unité monétaire acceptée par un pays étranger, tandis que la <br>« monnaie » est celle de son pays.
+    </h1>
 
+    <img id="devises_couverture" src="../../assets/devises_couverture1.jpg" />
 
-    <button>devises</button>
-    <button>devises</button>
-    <button>devises</button>
-    <button>devises</button>
-    <button>devises</button>
+    <div class = "div" >
+        <div class="box1">
+            <img id="flag" src="../../assets/Flag_of_France.svg"height="40" width="80" />
+            <a class = "liendevises" href="http://localhost:4200/devises/EURO"><button class="btn btn-danger" type="button"> Euro</button></a>
+            <p class = "border border-danger">
+                L'euro (€) est la monnaie unique de l'union économique et monétaire,
+                formée au sein de l'Union européenne; elle est commune à dix-neuf États
+                membres de l'Union européenne qui forment ainsi la zone euro.
+            </p>
+        </div>
+
+        <div class="box2">
+            <img id="flag" src="../../assets/Flag_of_the_United_Kingdom.svg" height="40" width="80" />
+            <a class = "liendevises"href="http://localhost:4200/devises/LIVRE"><button class="btn btn-danger" type="button"> Livre</button></a>
+            <p class = "border border-danger">
+                La livre sterling (en anglais : pound sterling), souvent abrégée en livre (pound),
+                est l'unité monétaire officielle du Royaume-Uni,
+                des dépendances de la Couronne britannique,
+                et des territoires britanniques d'outre-mer.
+            </p>
+        </div>
+
+        <div class="box3">
+            <img id="flag" src="../../assets/Flag_of_the_United_States_(Pantone).svg" height="40" width="80" />
+            <a class = "liendevises"href="http://localhost:4200/devises/DOLLAR-USA"><button class="btn btn-danger" type="button"> Dollar US</button></a>
+            <p class = "border border-danger">
+                Le dollar des États-Unis ou dollar américain ou dollar US ou USD est la
+                monnaie nationale des États-Unis et de ses territoires d'outre-mer (comme Porto Rico) ;
+                c'est aussi celle de l'Équateur, du Zimbabwe, des États fédérés de Micronésie, des Îles Marshall, et bien d'autres
+            </p>
+        </div>
+
+        <div class="box4">
+            <img id="flag" src="../../assets/Flag_of_Japan.svg" height="40" width="80" />
+            <a class = "liendevises"href="http://localhost:4200/devises/YEN"><button class="btn btn-danger" type="button"> Yen</button></a>
+            <p class = "border border-danger">
+                Le yen (円) est la monnaie officielle du Japon.
+                Il a été créé par une loi du 10 mai 18712, pour remplacer le ryō (両).
+                Le yen avait deux subdivisions, le sen (1/100) et le rin (1/1000). Néanmoins ces subdivisions ne sont plus utilisées depuis 1954.
+            </p>
+        </div>
+
+        <div class="box5">
+            <img id="flag" src="../../assets/Flag_of_Mexico.svg" height="40" width="80" />
+            <a class = "liendevises"href="http://localhost:4200/devises/PESO"><button class="btn btn-danger" type="button"> Peso</button></a>
+            <p class = "border border-danger">
+                Le peso (de l'espagnol : poids) ($) est le nom de plusieurs monnaies de cours légal dans sept pays d'Amérique
+                (Argentine, Chili, Colombie, Cuba, République dominicaine, Mexique, Uruguay) et aux Philippines1,
+                qui ont différentes valeurs.
+            </p>
+        </div>
+
+    </div>
+
+    <div class = "div">
+      <div class="box1">
+          <img id="flag" src="../../assets/Flag_of_Canada_(Pantone).svg"height="40" width="80" />
+          <a class = "liendevises"href="http://localhost:4200/devises/DOLLAR-CAN"><button class="btn btn-danger" type="button"> Dollar Canadien</button></a>
+          <p class = "border border-danger">
+            Le dollar canadien (symbole monétaire : $ ; code ISO 4217 :
+             CAD ; localement, CAN, $CA et $C sont utilisésNote 1,2,3)
+             est la devise officielle du Canada depuis 1858. Il est subdivisé en 100 cents (¢).
+          </p>
+      </div>
+
+      <div class="box2">
+          <img id="flag" src="../../assets/Flag_of_Switzerland.svg" height="40" width="80" />
+          <a class = "liendevises"href="http://localhost:4200/devises/FRANC-SUI"><button class="btn btn-danger" type="button"> Franc Suisse</button></a>
+          <p class = "border border-danger">
+            Le franc, précisé franc suisse lorsqu'il peut y avoir ambiguïté
+            , est la monnaie utilisée en Suisse et au Liechtenstein. Il est composé de 100 centimes
+          </p>
+      </div>
+
+      <div class="box3">
+          <img id="flag" src="../../assets/Flag_of_Israel.svg" height="40" width="80" />
+          <a class = "liendevises"href="http://localhost:4200/devises/SHEKEL"><button class="btn btn-danger" type="button"> Dirham</button></a>
+          <p class = "border border-danger">
+            Le shekel hadash est la monnaie nationale de l’État d’Israël. Son symbole monétaire est ₪,
+            combinaison des premières lettres des mots shekel (ש) and ẖadash (ח) (nouveau).
+            Le shekel est divisé en 100 agorot, pluriel d’agora, qui vient d’un mot akkadien (Mésopotamie) et signifie graine.
+
+          </p>
+      </div>
+
+      <div class="box4">
+          <img id="flag" src="../../assets/Flag_of_the_People's_Republic_of_China.svg" height="40" width="80" />
+          <a class = "liendevises"href="http://localhost:4200/devises/YUAN"><button class="btn btn-danger" type="button"> Yuan renmimbi</button></a>
+          <p class = "border border-danger">
+            Le yuan (chinois simplifié : 元 ; pinyin : yuán) « la monnaie du peuple » ; abrv. RMB ;
+            symbole monétaire : ¥) est la devise nationale de la république populaire de Chine à l'exception
+            des régions administratives spéciales de Hong Kong et de Macao
+          </p>
+      </div>
+
+      <div class="box5">
+          <img id="flag" src="../../assets/Flag_of_Russia.svg" height="40" width="80" />
+          <a class = "liendevises"href="http://localhost:4200/devises/ROUBLE"><button class="btn btn-danger" type="button"> Rouble</button></a>
+          <p class = "border border-danger">
+            Le rouble russe (en russe : российский рубль),
+            est l'unité monétaire de la Fédération de Russie depuis le 1er janvier 1993.
+             Son symbole ₽ est devenu officiel le 11 décembre 2013. Il est divisé en 100 kopecks.
+          </p>
+      </div>
+  </div>
 
 
 
 </body>
+</html>
 
 
