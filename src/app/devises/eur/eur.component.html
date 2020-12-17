@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>L'Euro</title>
+    <script src="eur.component.ts"> </script>
+    <script src="eur.component.css"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    <h1>L'Euro</h1>
+<div>
+
+  <img id = 'flag' src="../../../assets/flag/europe.jpg">
+
+
+  <p id = 'choix'>Choix de convertion</p>
+  <FORM NAME="Choix">
+<SELECT id = 'valeurChange' (change) = "lien($event)">
+<OPTION value="">Choisir une option</OPTION>
+<OPTION value="1"> Le Dollar-US</OPTION>
+<OPTION value="2">La Livre</OPTION>
+<OPTION value="3">Le Yen</OPTION>
+<OPTION value="4">Le Shekel</OPTION>
+<OPTION value="5">Le Dollar-Canadien</OPTION>
+<OPTION value="6">Le Franc-Suisse</OPTION>
+<OPTION value="7">Le Peso</OPTION>
+<OPTION value="8">Le Rouble</OPTION>
+<OPTION value="9">Le Yuan</OPTION>
+</SELECT>
+</FORM>
+
+
+<p id = 'choix'>Choix de la date</p>
+<input  type="date" (change) = "getValue();" placeholder="Entrez une date ici (YYYY-MM-DD)" id="date">
+<button type="button" (click)="fetcheur();">Soumettre</button>
+<p id = 'affiche'>1€ =    {{valeur}}{{symbol}}</p>
+</div>
+</body>
+</html>

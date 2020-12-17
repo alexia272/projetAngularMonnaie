@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="franc-suisse.component.css">
+    <script src="franc-suisse.component.ts"></script>
+    <script type="text/typescript" src="https://api.devises.org/v1/full/EUR/json?key=6308|a5k67trS*U61GHjbqqBGpFO7ed1azA21"></script>
+    <title>DEVISES</title>
+</head>
+<body>
+  <h1>Le Franc Suisse</h1>
+  <div>
+
+    <img id = 'flag' src="../../../assets/flag/Flag_of_Switzerland.svg" >
+
+
+    <p id = 'choix'>Choix de convertion</p>
+    <FORM NAME="Choix">
+  <SELECT id = 'valeurChange' (change) = "lien($event)">
+  <OPTION value="">Choisir une option</OPTION>
+  <OPTION value="1"> Le Dollar-US</OPTION>
+  <OPTION value="2">La Livre</OPTION>
+  <OPTION value="3">Le Yen</OPTION>
+  <OPTION value="4">Le Shekel</OPTION>
+  <OPTION value="5">L'Euro</OPTION>
+  <OPTION value="6">Le Dollar-Canadien</OPTION>
+  <OPTION value="7">Le Peso</OPTION>
+  <OPTION value="8">Le Rouble</OPTION>
+  <OPTION value="9">Le Yuan</OPTION>
+  </SELECT>
+  </FORM>
+
+
+  <p id = 'choix'>Choix de la date</p>
+  <input  type="date" (change) = "getValue();" placeholder="Entrez une date ici (YYYY-MM-DD)" id="date">
+  <button type="button" (click)="fetcheur();">Soumettre</button>
+  <p id = 'affiche'>1CHF =    {{valeur}}{{symbol}}</p>
+  </div>
+  </body>
