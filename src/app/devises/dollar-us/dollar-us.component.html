@@ -38,4 +38,11 @@
   <button type="button" (click)="fetcheur();">Soumettre</button>
   <p id = 'affiche'>1$ =    {{valeur}}{{symbol}}</p>
   </div>
+  <canvas baseChart id='canvas' margin-top=20px
+  [datasets]="barChartData"
+  [labels]="barChartLabels"
+  [options]="barChartOptions"
+  [legend]="barChartLegend"
+  [chartType]="barChartType">
+</canvas>
   </body>

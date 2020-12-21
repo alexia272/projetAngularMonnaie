@@ -17,6 +17,8 @@ import { RoubleComponent } from './devises/rouble/rouble.component';
 import { FrancSuisseComponent } from './devises/franc-suisse/franc-suisse.component';
 import { DollarCanadienComponent } from './devises/dollar-canadien/dollar-canadien.component';
 import { ShekelComponent } from './devises/shekel/shekel.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { ShekelComponent } from './devises/shekel/shekel.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent,DevisesComponent]
