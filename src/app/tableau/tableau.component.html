@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Monnaie</th>
+      <th scope="col">Actuel</th>
+      <th scope="col">2019</th>
+      <th scope="col">2018</th>
+      <th scope="col">2017</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of myArray[0].rates | keyvalue">
+      <th > {{item.key}}</th>
+      <td>{{item.value}}</td>
+      <td >{{item.value}}</td>
+      <td>@mdo</td>
+    </tr>
+
+  </tbody>
+</table>

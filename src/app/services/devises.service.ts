@@ -13,7 +13,7 @@ export class DevisesService {
 
   getDevisesList(): Observable<Array<Devises>>
   {
-    return this.http.get('https://api.devises.org/v1/full/EUR/json?key=6308|a5k67trS*U61GHjbqqBGpFO7ed1azA21').pipe(
+    return this.http.get('https://api.ratesapi.io/api/latest').pipe(
       map( (arrayJson: Array<object>) => arrayJson.map(
         (itemJson: object) => new Devises ( itemJson['Devises.nom'], itemJson['Devises.valeur'], itemJson['Devises.histoire']))
       )

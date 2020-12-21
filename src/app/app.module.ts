@@ -17,6 +17,8 @@ import { RoubleComponent } from './devises/rouble/rouble.component';
 import { FrancSuisseComponent } from './devises/franc-suisse/franc-suisse.component';
 import { DollarCanadienComponent } from './devises/dollar-canadien/dollar-canadien.component';
 import { ShekelComponent } from './devises/shekel/shekel.component';
+import { TableauComponent } from './tableau/tableau.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,11 +39,13 @@ import { ShekelComponent } from './devises/shekel/shekel.component';
     FrancSuisseComponent,
     DollarCanadienComponent,
     ShekelComponent,
+    TableauComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'angular-starter' }),
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
 
   ],
   providers: [],
