@@ -19,6 +19,8 @@ import { DollarCanadienComponent } from './devises/dollar-canadien/dollar-canadi
 import { ShekelComponent } from './devises/shekel/shekel.component';
 import { TableauComponent } from './tableau/tableau.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartsModule } from 'ng2-charts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule.withServerTransition({ appId: 'angular-starter' }),
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
+    ChartsModule
 
   ],
   providers: [],

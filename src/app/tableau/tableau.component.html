@@ -3,17 +3,39 @@
     <tr>
       <th scope="col">Monnaie</th>
       <th scope="col">Actuel</th>
-      <th scope="col">2019</th>
-      <th scope="col">2018</th>
-      <th scope="col">2017</th>
+      <th scope="col">
+        <select name="optionsaselection"
+        class="" [(ngModel)]="choixUser" >
+          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]">
+          {{myArray[i].date}}
+          </option>
+        </select>
+      </th>
+      <th scope="col">
+        <select name="optionsaselection"
+        class="" [(ngModel)]="choixUser1" >
+          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]">
+          {{myArray[i].date}}
+          </option>
+        </select>
+      </th>
+      <th scope="col">
+        <select name="optionsaselection"
+        class="" [(ngModel)]="choixUser2" >
+          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]">
+          {{myArray[i].date}}
+          </option>
+        </select>
+      </th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of myArray[0].rates | keyvalue">
-      <th > {{item.key}}</th>
-      <td>{{item.value}}</td>
-      <td >{{item.value}}</td>
+    <tr *ngFor="let item of choixUser1">
+      <th > {{item}}</th>
+      <td>{{item}}</td>
+      <td >{{item}}</td>
       <td>@mdo</td>
+      <td>alexia</td>
     </tr>
 
   </tbody>
