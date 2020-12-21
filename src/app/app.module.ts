@@ -20,6 +20,8 @@ import { DollarCanadienComponent } from './devises/dollar-canadien/dollar-canadi
 import { ShekelComponent } from './devises/shekel/shekel.component';
 import { FormComponent } from './money-convertor/form/form.component';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     MoneyConvertorComponent,
+
     EurComponent,
     LivreComponent,
     DollarUsComponent,
@@ -43,10 +46,19 @@ import { FormsModule } from '@angular/forms';
 
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'angular-starter' }),
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule,
     FormsModule
+=======
+<<<<<<< HEAD
+    ChartsModule
+=======
+
+>>>>>>> 9a6c0d90258c3bb07badd5f66d5b790096c02845
+>>>>>>> da227ed56bb26a359aa0411d587e88a8cc472121
   ],
   providers: [],
   bootstrap: [AppComponent, DevisesComponent, MoneyConvertorComponent, FormComponent]

@@ -11,7 +11,7 @@
   <h1>Le Yuan</h1>
   <div>
 
-    <img id = 'flag' src="../../../assets/Flag_of_the_People's_Republic_of_China.svg" >
+    <img id = 'flag' src="../../../assets/flag/Flag_of_the_People's_Republic_of_China.svg" >
 
 
     <p id = 'choix'>Choix de convertion</p>
@@ -36,4 +36,11 @@
   <button type="button" (click)="fetcheur();">Soumettre</button>
   <p id = 'affiche'>1¥ =    {{valeur}}{{symbol}}</p>
   </div>
+  <canvas baseChart id='canvas' margin-top=20px
+  [datasets]="barChartData"
+  [labels]="barChartLabels"
+  [options]="barChartOptions"
+  [legend]="barChartLegend"
+  [chartType]="barChartType">
+</canvas>
   </body>

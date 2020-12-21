@@ -13,7 +13,7 @@
   <h1>Le Dollar USA</h1>
   <div>
 
-    <img id = 'flag' src="../../../assets/Flag_of_the_United_States_(Pantone).svg" >
+    <img id = 'flag' src="../../../assets/flag/Flag_of_the_United_States_(Pantone).svg" >
 
 
     <p id = 'choix'>Choix de convertion</p>
@@ -38,4 +38,11 @@
   <button type="button" (click)="fetcheur();">Soumettre</button>
   <p id = 'affiche'>1$ =    {{valeur}}{{symbol}}</p>
   </div>
+  <canvas baseChart id='canvas' margin-top=20px
+  [datasets]="barChartData"
+  [labels]="barChartLabels"
+  [options]="barChartOptions"
+  [legend]="barChartLegend"
+  [chartType]="barChartType">
+</canvas>
   </body>
