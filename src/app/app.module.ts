@@ -28,6 +28,7 @@ import { ChartsModule } from 'ng2-charts';
     HeaderComponent,
     FooterComponent,
     MoneyConvertorComponent,
+
     EurComponent,
     LivreComponent,
     DollarUsComponent,
@@ -40,9 +41,14 @@ import { ChartsModule } from 'ng2-charts';
     ShekelComponent,
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'angular-starter' }),
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     ChartsModule
+=======
+
+>>>>>>> 9a6c0d90258c3bb07badd5f66d5b790096c02845
   ],
   providers: [],
   bootstrap: [AppComponent,DevisesComponent]

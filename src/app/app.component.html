@@ -1,20 +1,23 @@
-<div class="d-flex flex-column flex-root" style="background: #eff0f9">
-  <div class="flex-row flex-column-fluid page">
-      <div class="flex-column flex-row-fluid wrapper" id="kt_wrapper">
-        <app-header></app-header>
-
-          <div class="content flex-column flex-column-fluid" id="kt_content" style="min-height: 100vh !important;">
 
 
+<div class="d-flex flex-column flex-root" style="background: black">
+  <app-header></app-header>
+  <div class="d-flex flex-row flex-column-fluid page">
+      <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 
 
-              <router-outlet></router-outlet>
+          <div class="content d-flex " id="kt_content" style="min-height: 100vh;">
+
+
+
+
+            <router-outlet></router-outlet>
 
 
 
           </div>
-
           <app-footer></app-footer>
+
       </div>
   </div>
 

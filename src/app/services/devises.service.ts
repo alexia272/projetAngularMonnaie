@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {​​ Observable }​​ from 'rxjs';
-import {​​ Devises }​​ from './classes/devises';
+import {​​ Devises }​​ from '../classes/devises';
 import {​​ HttpClient }​​ from '@angular/common/http';
 import {​​ map}​​ from 'rxjs/operators';
 

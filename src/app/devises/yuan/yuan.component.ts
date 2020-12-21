@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { stringify } from 'querystring';
 import {​​ Devises }​​ from '../../classes/devises';
-import {​​ DevisesService }​​ from '../../devises.service';
 import {ChartsModule, Label, Color} from 'ng2-charts';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+import {​​ DevisesService }​​ from '../../services/devises.service';
 
 @Component({
   selector: 'app-yuan',
