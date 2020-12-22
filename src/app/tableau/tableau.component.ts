@@ -14,7 +14,9 @@ export class TableauComponent implements OnInit {
   choixUser: any;
   choixUser1: any;
   choixUser2: any;
-  Choix: [];
+  Choix: any;
+  selctMyarray= this.myArray[1];
+  itemSelected: any;
 
 
   constructor(
@@ -48,10 +50,11 @@ export class TableauComponent implements OnInit {
     this.myArray.push(this.monnaie);
     console.log(this.myArray)
 
+    this.Choix = this.choixUser;
 
+  }
 
-
-
-
+  onChange(){
+    console.log(this.itemSelected)
   }
 }

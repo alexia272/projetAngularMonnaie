@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+      "target": "https://api.ratesapi.io",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+  }
+}

@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { FormComponent } from './form/form.component';
+import { stringify } from '@angular/compiler/src/util';
+import { DevisesService } from '../services/devises.service';
+
 
 @Component({
   selector: 'app-money-convertor',
@@ -7,9 +14,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoneyConvertorComponent implements OnInit {
 
-  constructor() { }
+  valeur: string;
+
+
+  constructor(public devisesService: DevisesService) {}
+
 
   ngOnInit(): void {
+
+
   }
+
+
+  /*fetch_Data(): void{
+
+    fetch(this.devisesService.lienHttpBaseSymbol)
+
+      .then(response => {​​​​return response.json();
+
+       }​​​​)
+
+      .then(data => {​​​​
+
+        this.devisesService.conversion = data.rates.GBP;
+
+      }​​​​);
+    console.log(this.devisesService.conversion);
+  }*/
 
 }

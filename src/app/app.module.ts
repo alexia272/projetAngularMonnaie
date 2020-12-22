@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { MoneyConvertorComponent } from './money-convertor/money-convertor.component';
+import { HttpClientModule } from '@angular/common/http';
 import { EurComponent } from './devises/eur/eur.component';
 import { LivreComponent } from './devises/livre/livre.component';
 import { DollarUsComponent } from './devises/dollar-us/dollar-us.component';
@@ -18,7 +19,9 @@ import { FrancSuisseComponent } from './devises/franc-suisse/franc-suisse.compon
 import { DollarCanadienComponent } from './devises/dollar-canadien/dollar-canadien.component';
 import { ShekelComponent } from './devises/shekel/shekel.component';
 import { TableauComponent } from './tableau/tableau.component';
-import { HttpClientModule } from '@angular/common/http';
+
+import { FormComponent } from './money-convertor/form/form.component';
+
 import { ChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 
@@ -42,6 +45,8 @@ import { FormsModule } from '@angular/forms';
     DollarCanadienComponent,
     ShekelComponent,
     TableauComponent,
+    FormComponent,
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'angular-starter' }),
@@ -49,10 +54,12 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ChartsModule
 
+    HttpClientModule,
+    FormsModule,
+    ChartsModule
   ],
   providers: [],
-  bootstrap: [AppComponent,DevisesComponent]
+  bootstrap: [AppComponent, DevisesComponent, MoneyConvertorComponent, FormComponent]
 })
 export class AppModule { }

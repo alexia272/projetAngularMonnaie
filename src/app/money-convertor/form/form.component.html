@@ -1,0 +1,57 @@
+<form #userForm = "ngForm" (ngSubmit)= "onFormSubmit(userForm)">
+<div class="form-group">
+    <label for="montant">
+     Montant
+    </label>
+    <input type="number" 
+                    ngModel 
+                    id="montant" 
+                    class="form-control" 
+                    name="montant"
+                    >
+
+    <label for="monnaie_depart">
+      Choix monnaie de départ : 
+    </label>
+    <select id="monnaie_depart" 
+            class="form-control" 
+            name="monnaie_depart" 
+            ngModel>
+            <option value="USD">Dollar US</option>
+            <option value="GBP">Livre</option>
+            <option value="EUR">Euro</option>
+            <option value="JPY">Yen</option>
+            <option value="MXN">Peso</option>
+            <option value="CAD">Dollar Can</option>
+            <option value="CHF">Franc Suisse</option>
+            <option value="ILS">Dirham</option>
+            <option value="CNY">Yuan</option>
+            <option value="RUB">Rouble</option>
+    </select>
+    <br>
+    <label for="monnaie_arrive">
+      Choix monnaie d'arrivée : 
+    </label>
+    <select id="monnaie_arrive" 
+            class="form-control" 
+            name="monnaie_arrive" 
+            ngModel>
+            <option value="USD">Dollar US</option>
+            <option value="GBP">Livre</option>
+            <option value="EUR">Euro</option>
+            <option value="JPY">Yen</option>
+            <option value="MXN">Peso</option>
+            <option value="CAD">Dollar Can</option>
+            <option value="CHF">Franc Suisse</option>
+            <option value="ILS">Dirham</option>
+            <option value="CNY">Yuan</option>
+            <option value="RUB">Rouble</option>
+    </select>
+    <br>
+    <button class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-danger" (click)="resetUserForm(userForm)">Reset</button>
+  </div>
+
+</form>
+
+<h1>{{valeur}}</h1>

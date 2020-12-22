@@ -21,8 +21,8 @@
       </th>
       <th scope="col">
         <select name="optionsaselection"
-        class="" [(ngModel)]="choixUser2" >
-          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]">
+        class="" [(ngModel)]="itemSelected" >
+          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]" (change)="onChange(myArray[i])">
           {{myArray[i].date}}
           </option>
         </select>
@@ -30,11 +30,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of choixUser1">
-      <th > {{item}}</th>
-      <td>{{item}}</td>
-      <td >{{item}}</td>
-      <td>@mdo</td>
+    <tr *ngFor="let item of myArray[0].rates | keyvalue">
+      <th> {{item.key}}</th>
+      <td>{{item.value}}</td>
+      <td >{{item.value}}</td>
+      <td  *ngFor="let item of choixUser">  </td>
       <td>alexia</td>
     </tr>
 

@@ -107,8 +107,8 @@ export class DollarCanadienComponent implements OnInit {
   ];
 
   valeur: string;
-  nom:string;
-  symbol:string;
+  nom: string;
+  symbol: string;
   input: string;
   httpBase = 'https://api.ratesapi.io/api/latest?';
   httpDate = 'latest';
