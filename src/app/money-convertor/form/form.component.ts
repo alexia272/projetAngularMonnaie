@@ -1,6 +1,5 @@
-import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
-import { Devises } from '../../classes/devises';
-import { DevisesService } from '../../devises.service';
+import { Component, OnInit } from '@angular/core';
+import { DevisesService } from '../../services/devises.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -14,8 +13,16 @@ export class FormComponent implements OnInit {
   re1 = /XXX/gi;
   re2 = /YYY/gi;
   lienHttpbase: string;
-  essai: number;
+  valeurUnit: number;
   valeur: number;
+  result: string;
+  montant: string;
+  depart: string;
+  valeurString: string;
+  arrive: string;
+  tauxActuel = 'Taux actuel = ';
+  taux: string;
+  isAvailable: boolean;
 
   constructor(public devisesService: DevisesService) { }
 
@@ -25,7 +32,7 @@ export class FormComponent implements OnInit {
 
   }
 
-  onFormSubmit(userForm: NgForm): void{
+  onFormSubmit(userForm: NgForm): void {
     console.log(userForm.value);
     this.devisesService.montant = userForm.controls['montant'].value;
     this.devisesService.depart = userForm.controls['monnaie_depart'].value;
@@ -33,15 +40,26 @@ export class FormComponent implements OnInit {
 
     this.lienHttpbase = this.lienHttp.replace(this.re1, this.devisesService.depart);
     this.devisesService.lienHttpBaseSymbol = this.lienHttpbase.replace(this.re2, this.devisesService.arrive);
-    console.log(this.devisesService.arrive);
 
-    this.essai = this.devisesService.fetch_Data(this.devisesService.arrive);
-    this.valeur = this.essai * this.devisesService.montant;
-    console.log(this.valeur);
+    this.valeurUnit = this.devisesService.fetch_Data(this.devisesService.arrive);
+    this.valeur = this.valeurUnit * this.devisesService.montant;
+    if (isNaN(this.valeur)) {
+      this.isAvailable = false;
+    }
+    else {
+      this.isAvailable = true;
+    }
+    this.montant = this.devisesService.montant.toString();
+    this.depart = this.devisesService.depart.toString();
+    this.valeurString = this.valeur.toString();
+    this.arrive = this.devisesService.arrive.toString();
+    this.result = this.montant.concat(' ', this.depart, ' ', '=', ' ', this.valeurString, ' ', this.arrive);
+
+    this.taux = this.tauxActuel.concat(' ', this.valeurUnit.toString());
+
   }
-  resetUserForm(userForm: NgForm): void{
+  resetUserForm(userForm: NgForm): void {
     userForm.resetForm();
   }
-
 
 }

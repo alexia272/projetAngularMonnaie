@@ -49,16 +49,10 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule.withServerTransition({ appId: 'angular-starter' }),
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     HttpClientModule,
-    FormsModule
-=======
-<<<<<<< HEAD
+    FormsModule,
     ChartsModule
-=======
 
->>>>>>> 9a6c0d90258c3bb07badd5f66d5b790096c02845
->>>>>>> da227ed56bb26a359aa0411d587e88a8cc472121
   ],
   providers: [],
   bootstrap: [AppComponent, DevisesComponent, MoneyConvertorComponent, FormComponent]

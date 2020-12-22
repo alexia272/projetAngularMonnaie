@@ -10,18 +10,20 @@ export class DevisesService {
   depart: string;
   arrive: string;
   lienHttpBaseSymbol: string;
-  conversion: string;
+  conversion: number;
 
-  constructor(){  }
-  fetch_Data(arrive: string): number{
 
+  constructor() { }
+
+  fetch_Data(arrive: string): number {
     fetch(this.lienHttpBaseSymbol)
 
-      .then(response => {​​​​return response.json();
+      .then(response => {
+        return response.json();
 
-       }​​​​)
+      })
 
-      .then(data => {​​​​
+      .then(data => {
         switch (arrive) {
           case 'USD':
             this.conversion = data.rates.USD;
@@ -53,13 +55,8 @@ export class DevisesService {
           case 'RUB':
             this.conversion = data.rates.RUB;
             break;
-
         }
-
-      }​​​​);
-    console.log(Number(this.conversion));
+      });
     return Number(this.conversion);
   }
-
-
 }

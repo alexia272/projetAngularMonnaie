@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { stringify } from 'querystring';
 import {​​ Devises }​​ from '../../classes/devises';
-<<<<<<< HEAD
-import {​​ DevisesService }​​ from '../../devises.service';
 import {ChartsModule, Label, Color} from 'ng2-charts';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
-=======
 import {​​ DevisesService }​​ from '../../services/devises.service';
->>>>>>> 9a6c0d90258c3bb07badd5f66d5b790096c02845
 
 @Component({
   selector: 'app-rouble',

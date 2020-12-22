@@ -1,7 +1,7 @@
 <form #userForm = "ngForm" (ngSubmit)= "onFormSubmit(userForm)">
 <div class="form-group">
     <label for="montant">
-     Montant
+     Choisissez un montant
     </label>
     <input type="number" 
                     ngModel 
@@ -9,13 +9,14 @@
                     class="form-control" 
                     name="montant"
                     >
-
+    <br>
     <label for="monnaie_depart">
-      Choix monnaie de départ : 
+      Choisissez une monnaie de départ : 
     </label>
     <select id="monnaie_depart" 
             class="form-control" 
             name="monnaie_depart" 
+            (change)= "onFormSubmit(userForm)"
             ngModel>
             <option value="USD">Dollar US</option>
             <option value="GBP">Livre</option>
@@ -24,18 +25,19 @@
             <option value="MXN">Peso</option>
             <option value="CAD">Dollar Can</option>
             <option value="CHF">Franc Suisse</option>
-            <option value="ILS">Dirham</option>
+            <option value="ILS">Shekel</option>
             <option value="CNY">Yuan</option>
             <option value="RUB">Rouble</option>
     </select>
     <br>
     <label for="monnaie_arrive">
-      Choix monnaie d'arrivée : 
+      Choisissez la monnaie voulue : 
     </label>
     <select id="monnaie_arrive" 
             class="form-control" 
-            name="monnaie_arrive" 
-            ngModel>
+            name="monnaie_arrive"
+            ngModel
+            (change)= "onFormSubmit(userForm)">
             <option value="USD">Dollar US</option>
             <option value="GBP">Livre</option>
             <option value="EUR">Euro</option>
@@ -43,15 +45,19 @@
             <option value="MXN">Peso</option>
             <option value="CAD">Dollar Can</option>
             <option value="CHF">Franc Suisse</option>
-            <option value="ILS">Dirham</option>
+            <option value="ILS">Shekel</option>
             <option value="CNY">Yuan</option>
             <option value="RUB">Rouble</option>
     </select>
     <br>
-    <button class="btn btn-primary">Submit</button>
-    <button type="button" class="btn btn-danger" (click)="resetUserForm(userForm)">Reset</button>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary">Convertir</button>
+      <button type="button" class="btn btn-danger" (click)="resetUserForm(userForm)">Reset</button>
+    </div>
   </div>
 
 </form>
-
-<h1>{{valeur}}</h1>
+<h1 *ngIf="isAvailable">
+  {{taux}}<br><br>
+  {{result}}
+</h1>
