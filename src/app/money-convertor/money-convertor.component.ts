@@ -14,32 +14,10 @@ import { DevisesService } from '../services/devises.service';
 })
 export class MoneyConvertorComponent implements OnInit {
 
-  valeur: string;
-
-
   constructor(public devisesService: DevisesService) {}
 
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-
-  }
-
-
-  /*fetch_Data(): void{
-
-    fetch(this.devisesService.lienHttpBaseSymbol)
-
-      .then(response => {​​​​return response.json();
-
-       }​​​​)
-
-      .then(data => {​​​​
-
-        this.devisesService.conversion = data.rates.GBP;
-
-      }​​​​);
-    console.log(this.devisesService.conversion);
-  }*/
 
 }

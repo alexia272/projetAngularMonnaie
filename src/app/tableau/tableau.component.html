@@ -1,41 +1,16 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Monnaie</th>
-      <th scope="col">Actuel</th>
-      <th scope="col">
-        <select name="optionsaselection"
-        class="" [(ngModel)]="choixUser" >
-          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]">
-          {{myArray[i].date}}
-          </option>
-        </select>
-      </th>
-      <th scope="col">
-        <select name="optionsaselection"
-        class="" [(ngModel)]="choixUser1" >
-          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]">
-          {{myArray[i].date}}
-          </option>
-        </select>
-      </th>
-      <th scope="col">
-        <select name="optionsaselection"
-        class="" [(ngModel)]="itemSelected" >
-          <option *ngFor="let item of myArray; let i = index" [value]="myArray[i]" (change)="onChange(myArray[i])">
-          {{myArray[i].date}}
-          </option>
-        </select>
-      </th>
+      <th scope="col" style="text-align: center;">Monnaies</th>
+      <th scope="col" style="text-align: center;">Devises</th>
+
     </tr>
   </thead>
-  <tbody>
+  <tbody style="text-align: center;">
     <tr *ngFor="let item of myArray[0].rates | keyvalue">
-      <th> {{item.key}}</th>
-      <td>{{item.value}}</td>
-      <td >{{item.value}}</td>
-      <td  *ngFor="let item of choixUser">  </td>
-      <td>alexia</td>
+      <th style="color: aliceblue;"> {{item.key}}</th>
+      <td style="color: aliceblue;">{{item.value}}</td>
+
     </tr>
 
   </tbody>

@@ -1,0 +1,15 @@
+div{
+    
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    
+    
+}
+h1{
+    text-align: center;
+    margin: 10px;
+}
